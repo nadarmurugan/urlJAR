@@ -1,6 +1,3 @@
-Here’s a clean, professional, and **GitHub-ready version** of your `README.md` — rewritten without citation placeholders, fully formatted with emojis, and polished for clarity and presentation 👇
-
----
 <h1 align="center"> 🫙 urlJAR – Organize Your Bookmarks in Style 🌐 </h1>
 
 <p align="center">
@@ -9,6 +6,13 @@ Here’s a clean, professional, and **GitHub-ready version** of your `README.md`
   <img src="https://img.shields.io/badge/Tailwind_CSS-v3-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind CSS">
   <img src="https://img.shields.io/badge/Visualization-Chart.js-ff6384?style=for-the-badge&logo=chart.js" alt="Chart.js">
   <img src="https://img.shields.io/badge/Security-PDO_&_BCRYPT-green?style=for-the-badge&logo=lock" alt="Security">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/stars/nadarmurugan/urlJAR?style=social" alt="GitHub stars">
+  <img src="https://img.shields.io/github/forks/nadarmurugan/urlJAR?style=social" alt="GitHub forks">
+  <img src="https://img.shields.io/github/last-commit/nadarmurugan/urlJAR?style=flat&color=brightgreen" alt="Last Commit">
+  <img src="https://img.shields.io/github/license/nadarmurugan/urlJAR?color=blue&style=flat" alt="License">
 </p>
 
 <p align="center">✨ A sleek, modern, and secure way to save, organize, and visualize your bookmarks — all in one stylish interface. ✨</p>
@@ -151,9 +155,10 @@ This project is licensed under the **MIT License** — you are free to use, modi
 
 👨‍💻 **Author:** [Jeymurugan Nadar](https://github.com/nadarmurugan)
 📍 Mumbai, India
-📧 Email: *[your email or portfolio link]*
+📧 Email: *[murugannadar077@gmail.com]*
 
 ---
 
 Would you like me to make this README include **badges** (for languages, license, stars, last commit, etc.) and a **preview image section** at the top (for GitHub aesthetics)?
+
 

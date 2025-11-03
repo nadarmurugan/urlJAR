@@ -155,10 +155,11 @@ This project is licensed under the **MIT License** — you are free to use, modi
 
 👨‍💻 **Author:** [Jeymurugan Nadar](https://github.com/nadarmurugan)
 📍 Mumbai, India
-📧 Email: *[murugannadar077@gmail.com]*
+📧 Email: murugannadar077@gmail.com
 
 ---
 
 Would you like me to make this README include **badges** (for languages, license, stars, last commit, etc.) and a **preview image section** at the top (for GitHub aesthetics)?
+
 
 

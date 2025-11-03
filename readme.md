@@ -173,12 +173,11 @@ $dbname = "if0_40320375_urljar";
 * Open **phpMyAdmin** in InfinityFree.
 * Import `urljar.sql` to create tables (`users`, `jars`, `links`).
 
-6️⃣ **Access the Site**
+6️⃣ **Visit the Site**
 
-* 🌐 **Main Site:** `https://yourproject.epizy.com/`
-* 🔑 **Admin Panel:** `https://yourproject.epizy.com/admin/`
-
----
+* 🌐 **Main Site:** ` https://urljar.free.nf//`
+* 🔑 **Admin Panel:** `https://urljar.free.nf/admin/`
+  
 
 ### 🔒 Production Security Tips
 
@@ -234,4 +233,5 @@ Licensed under the **MIT License** — free to use, modify, and distribute with 
 📧 **Email:** [murugannadar077@gmail.com](mailto:murugannadar077@gmail.com)
 
 ---
+
 

@@ -1,3 +1,6 @@
+
+---
+
 <h1 align="center"> 🫙 urlJAR – Organize Your Bookmarks in Style 🌐 </h1>
 
 <p align="center">
@@ -17,47 +20,49 @@
 
 <p align="center">✨ A sleek, modern, and secure way to save, organize, and visualize your bookmarks — all in one stylish interface. ✨</p>
 
+---
 
 ## ✨ Project Overview
 
-**urlJAR** is a next-generation **bookmark manager** that transforms traditional text-based bookmark folders into **beautiful, card-based collections called “Jars.”**
+**urlJAR** is a next-generation **bookmark manager** that reimagines the way you store and organize links.
+Instead of cluttered browser folders, it introduces **beautiful, card-based collections** called **“Jars.”**
 
-Built for speed, clarity, and aesthetics, urlJAR replaces cluttered browser lists with a sleek interface designed around usability and data safety. The system is powered by secure PHP + MySQL architecture and includes a dedicated **Admin Panel** for oversight and management.
+Built for speed, simplicity, and security, urlJAR delivers a clean user experience powered by a **PHP + MySQL** backend and a vibrant **Tailwind CSS** frontend — complete with analytics, theming, and an admin dashboard.
 
 ---
 
 ## 🌟 Key Features
 
-### 🧑‍💻 User Environment
+### 🧑‍💻 User Features
 
-* 🎨 **Visual Organization (Jars)** – Group links into customizable “Jars” with titles, colors, and emojis.
-* 🔗 **Full Link Management (CRUD)** – Add, edit, or delete links with attributes like URL, title, tags, notes, and emoji icons.
-* 🔒 **Secure Accounts** – Safe login/logout with server-side validation and `user_id`-based access control.
-* 📈 **Personal Analytics** – A dynamic analytics dashboard built with Chart.js showing user activity and link-saving trends.
-* 🌙 **Neon Theme + Dark/Light Mode** – Toggle between stunning neon-themed light and dark modes for a better visual experience.
+* 🎨 **Visual Jars** – Organize your bookmarks into customizable jars with colors, emojis, and titles.
+* 🔗 **Full Link Management (CRUD)** – Add, edit, or delete links with metadata such as tags, titles, and notes.
+* 🔒 **Account Security** – Secure login/logout with server-side validation and user-based access control.
+* 📈 **Personal Analytics** – Interactive dashboard powered by Chart.js to visualize link-saving activity.
+* 🌙 **Dynamic Theme** – Neon-themed dark/light modes for a better visual experience.
 
 ---
 
-### 👑 Admin Environment
+### 👑 Admin Features
 
-A powerful, restricted-access **Admin Panel** provides full control over the platform:
+The **Admin Panel** provides full control and insight into the platform:
 
-* 🛡️ **Transactional Delete User** – Ensures full data integrity using PDO transactions; deleting a user automatically removes all their Jars and links.
-* 👥 **User Lifecycle Management** – Add, edit, or delete any user account securely.
-* 📊 **System Metrics Dashboard** – Visual overview of total users, Jars, and links; includes real-time usage charts using Chart.js.
+* 🛡️ **Transactional User Deletion** – Ensures full data integrity via PDO transactions.
+* 👥 **User Management** – Add, update, or delete users securely.
+* 📊 **System Metrics Dashboard** – Real-time overview of total users, jars, and links, visualized with Chart.js.
 
 ---
 
 ## 💻 Technical Stack
 
-| Category                   | Technology          | Description                                                              |
-| :------------------------- | :------------------ | :----------------------------------------------------------------------- |
-| **Backend/Core**           | PHP (v7+)           | Handles logic, routing, and authentication.                              |
-| **Database**               | MySQL / MariaDB     | Stores user, Jar, and link data with relational integrity.               |
-| **Database Access**        | PDO + MySQLi        | Secure communication with prepared statements to prevent SQL injection.  |
-| **Password Security**      | BCRYPT Hashing      | Safely stores encrypted passwords.                                       |
-| **Frontend**               | HTML + Tailwind CSS | Responsive UI built with Tailwind for fast styling and a neon aesthetic. |
-| **Charts & Visualization** | Chart.js (v4.4.1)   | Interactive analytics and dashboard graphs.                              |
+| Category              | Technology          | Description                                                |
+| :-------------------- | :------------------ | :--------------------------------------------------------- |
+| **Backend/Core**      | PHP (v7+)           | Handles application logic, routing, and authentication.    |
+| **Database**          | MySQL / MariaDB     | Stores user, jar, and link data with relational integrity. |
+| **Database Access**   | PDO + MySQLi        | Secure database interaction with prepared statements.      |
+| **Password Security** | BCRYPT              | Encrypts and stores passwords safely.                      |
+| **Frontend**          | HTML + Tailwind CSS | Modern, responsive, and fast UI design.                    |
+| **Visualization**     | Chart.js (v4.4.1)   | Displays analytics and statistics interactively.           |
 
 ---
 
@@ -73,81 +78,152 @@ A powerful, restricted-access **Admin Panel** provides full control over the pla
 2. **Set Up Database**
 
    * Import the provided `urljar.sql` file into your MySQL/MariaDB server.
-   * Update your `config.php` with the correct database credentials.
+   * Update `includes/config.php` with your database credentials.
 
-3. **Run on Localhost**
+3. **Run Locally**
 
-   * Place the project in your `htdocs` (for XAMPP) or webroot folder.
-   * Start Apache and MySQL from your XAMPP control panel.
-   * Visit `http://localhost/urlJAR/` in your browser.
+   * Place the project in your `htdocs` (XAMPP) or webroot folder.
+   * Start Apache and MySQL.
+   * Open `http://localhost/urlJAR/` in your browser.
 
-4. **(Optional) Admin Panel Access**
+4. **Access the Admin Panel (Optional)**
 
-   * Default admin login uses demo credentials (see below).
-   * For production, replace with hashed database-stored credentials.
+   * Default demo credentials are provided.
+   * For production, replace them with secure, hashed credentials.
 
 ---
 
 ## ⚠️ Security Notes
 
-* 🚨 **Admin Login:** The `admin_login.php` currently uses **demo credentials** (plaintext).
+* 🚨 **Admin Login:** Uses demo credentials for testing.
+  Replace with hashed credentials in production.
+  Protect `/admin/` using `.htaccess` or server-level authentication.
 
-  * Replace with secure, hashed credentials in production.
-  * Protect the `/admin/` folder with `.htaccess` or other authentication methods.
+* 🔐 **Database Integrity:**
 
-* 🔐 **Database Engine:**
-
-  * Uses **InnoDB** to support transactions and maintain referential integrity.
-  * `FOREIGN KEY` constraints with `ON DELETE CASCADE` ensure automatic cleanup of dependent data.
+  * Uses **InnoDB** with **foreign key constraints** for safe cascading deletions.
+  * Ensures atomic operations via **PDO transactions**.
 
 ---
 
 ## 🧠 Data Integrity
 
-urlJAR prioritizes **data safety** and **consistency**:
+urlJAR ensures consistency and prevents orphan data:
 
-* Deleting a user triggers a **PDO transaction** that removes all associated Jars and links atomically.
-* Foreign key relationships ensure consistent cleanup and prevent orphan data.
+* Deleting a user triggers a PDO transaction to remove all their jars and links.
+* Relational constraints maintain database cleanliness and reliability.
 
 ---
 
 ## 🌐 Deployment
 
-Compatible with **LAMP/LEMP** stacks (Linux, Apache/Nginx, MySQL/MariaDB, PHP).
+**Compatible with:** LAMP/LEMP Stacks (Linux, Apache/Nginx, MySQL/MariaDB, PHP)
 
-Recommended:
+**Recommended:**
 
-* PHP 7.4 or higher
-* MySQL 5.7+ / MariaDB 10+
-* Apache/Nginx server
+* PHP ≥ 7.4
+* MySQL ≥ 5.7 / MariaDB ≥ 10
+* Apache or Nginx
+
+---
+
+## 🚀 Deployment on InfinityFree
+
+urlJAR can be easily hosted on [InfinityFree](https://infinityfree.net) — a free PHP + MySQL hosting platform.
+
+### 🏗️ Steps
+
+1️⃣ **Create a Hosting Account**
+
+* Sign up on InfinityFree and create a new hosting instance.
+* You’ll receive a subdomain (e.g., `yourproject.epizy.com`).
+
+2️⃣ **Database Setup**
+
+* Go to **cPanel → MySQL Databases**.
+* Create a new database and note your credentials.
+
+**Example:**
+
+| Parameter | Value                   |
+| --------- | ----------------------- |
+| Database  | if0_40320375_urljar     |
+| User      | if0_40320375            |
+| Host      | sql309.infinityfree.com |
+
+3️⃣ **Upload Files**
+
+* Upload all project files to `/htdocs/`.
+* Place admin files in `/admin/` for structure.
+
+4️⃣ **Configure Database**
+Update `includes/config.php`:
+
+```php
+<?php
+$host = "sql309.infinityfree.com";
+$user = "if0_40320375";
+$pass = "your_database_password";
+$dbname = "if0_40320375_urljar";
+?>
+```
+
+5️⃣ **Import the Database**
+
+* Open **phpMyAdmin** in InfinityFree.
+* Import `urljar.sql` to create tables (`users`, `jars`, `links`).
+
+6️⃣ **Access the Site**
+
+* 🌐 **Main Site:** `https://yourproject.epizy.com/`
+* 🔑 **Admin Panel:** `https://yourproject.epizy.com/admin/`
+
+---
+
+### 🔒 Production Security Tips
+
+* Protect `/admin/` with `.htaccess`.
+* Replace any hardcoded credentials with hashed, database-stored ones.
+* Keep regular backups and enforce strict file permissions.
+
+---
+
+## ✅ Current Hosting Setup
+
+| Parameter   | Details                 |
+| ----------- | ----------------------- |
+| Platform    | InfinityFree            |
+| Database    | if0_40320375_urljar     |
+| Host        | sql309.infinityfree.com |
+| Admin Panel | `/admin/` subdirectory  |
 
 ---
 
 ## 💡 Future Enhancements
 
-* 🔍 Search & Tag Filtering for Jars
-* 🧠 AI-powered Link Categorization
-* 🪄 Drag-and-Drop Link Organization
-* 📤 Cloud Backup Integration
+* 🔍 **Smart Search & Tag Filtering**
+* 🧠 **AI-Powered Link Categorization**
+* 🪄 **Drag-and-Drop Jar Organization**
+* ☁️ **Cloud Backup & Sync Integration**
 
 ---
 
 ## 🤝 Contributing
 
-Contributions, feature requests, and feedback are always welcome!
+Contributions, ideas, and feature requests are welcome!
 
-To contribute:
+**Steps:**
 
-1. Fork the repository
-2. Create a new branch
+1. Fork this repository
+2. Create a feature branch
 3. Commit your changes
-4. Submit a pull request 🚀
+4. Open a pull request 🚀
 
 ---
 
 ## 🧾 License
 
-This project is licensed under the **MIT License** — you are free to use, modify, and distribute with attribution.
+Licensed under the **MIT License** — free to use, modify, and distribute with attribution.
 
 ---
 
@@ -155,11 +231,7 @@ This project is licensed under the **MIT License** — you are free to use, modi
 
 👨‍💻 **Author:** [Jeymurugan Nadar](https://github.com/nadarmurugan)
 📍 Mumbai, India
-📧 Email: murugannadar077@gmail.com
+📧 **Email:** [murugannadar077@gmail.com](mailto:murugannadar077@gmail.com)
 
 ---
-
-Would you like me to make this README include **badges** (for languages, license, stars, last commit, etc.) and a **preview image section** at the top (for GitHub aesthetics)?
-
-
 
